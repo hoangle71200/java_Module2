@@ -27,10 +27,10 @@ public class Circle {
     }
 
 //    public void setID () {
-//        this.id++;
+//        id++;
 //    }
     public int getID () {
-        return this.id;
+        return id;
     }
     public int getRadius () {
         return this.radius;
