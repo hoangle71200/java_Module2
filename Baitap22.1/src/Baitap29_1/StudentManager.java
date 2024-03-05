@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StudentManager {
     static Scanner sc = new Scanner(System.in);
     static Student listStudent[] = new Student[10];
-    private static int studentCount = 0;
+//    private static int studentCount = 0;
     public static void addSComputer () {
         Student st1 = new Student(1, "hoang", 23, "hoang@.com");
         Student st2 = new Student(2, "hung", 23, "hung@.com");
@@ -73,17 +73,6 @@ public class StudentManager {
         if (countName == listStudent.length) {
             System.out.println("Không tồn tại name");
         }
-//        boolean found = false;
-//        for (int i = 0; i < studentCount; i++) {
-//            if (listStudent[i].getName().equalsIgnoreCase(findName)) {
-//                System.out.println(listStudent[i]);
-//                found = true;
-//                System.out.println(listStudent[i].getName());
-//            }
-//        }
-//        if (!found) {
-//            System.out.println("Không tìm thấy sinh viên có tên: " + findName);
-//        }
     }
     public static void findByID (int findID) {
         int countID = 0;
