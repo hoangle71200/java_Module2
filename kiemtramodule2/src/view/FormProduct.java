@@ -126,7 +126,7 @@ public class FormProduct {
             }
         }
     }
-    public void showAllProduct() {
+    public void showAllProduct () {
         System.out.println("---------- Hiển thị danh sách ----------");
         System.out.println("1. Thêm mới");
         List<Product> listShowAll = productController.findAll();
