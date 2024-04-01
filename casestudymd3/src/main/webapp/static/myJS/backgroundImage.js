@@ -7,4 +7,4 @@ function changeImage(){
         index=0;
     }
 }
-setInterval(changeImage() ,5000);
+// setInterval(changeImage() ,1000);

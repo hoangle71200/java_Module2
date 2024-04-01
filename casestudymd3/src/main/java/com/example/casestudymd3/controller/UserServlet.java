@@ -1,5 +1,6 @@
 package com.example.casestudymd3.controller;
 
+import com.example.casestudymd3.Filter.LogInFilter;
 import com.example.casestudymd3.model.User;
 import com.example.casestudymd3.repository.UserRepositoryImpl;
 
@@ -27,15 +28,19 @@ public class UserServlet extends HttpServlet {
                 showCreatePage(req, resp);
                 break;
             case "edit":
+                LogInFilter.checkLogIn(req,resp);
                 showEditPage(req, resp);
                 break;
             case "delete":
+                LogInFilter.checkLogIn(req,resp);
                 deleteUser(req, resp);
                 break;
             case "back":
+                LogInFilter.checkLogIn(req,resp);
                 backAdmin(req, resp);
                 break;
             default:
+                LogInFilter.checkLogIn(req,resp);
                 showList(req, resp);
         }
     }
@@ -78,6 +83,7 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        LogInFilter.checkLogIn(req,resp);
         String action = req.getParameter("action");
         if (action == null) {
             action = "";

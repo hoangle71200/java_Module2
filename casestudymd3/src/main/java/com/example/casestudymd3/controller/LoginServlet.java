@@ -35,11 +35,15 @@ public class LoginServlet extends HttpServlet {
         List<User> userList = userRepository.findAll();
         boolean check = false;
         HttpSession session = req.getSession(true);
+        User userLog = new User();
         for (User user:userList){
             if (user.getUsername().equals(username) && user.getPassword().equals(password)){
                 check=true;
+                userLog = user;
                 session.setAttribute("idUser", user.getId());
+                session.setAttribute("userLog", userLog);
                 session.setAttribute("role", user.getRole());
+                session.setAttribute("isLogIn",true);
                 break;
             }
         }
@@ -49,7 +53,6 @@ public class LoginServlet extends HttpServlet {
                 req.getRequestDispatcher("/users/admin.jsp").forward(req,resp);
             }
             else {
-                req.setAttribute("idUser",session.getAttribute("idUser"));
                 List<Dog> dogList = service.findAll();
                 Set<String> typeList = new HashSet<>();
                 Set<String> colorList = new HashSet<>();
@@ -57,10 +60,10 @@ public class LoginServlet extends HttpServlet {
                     typeList.add(dog.getType());
                     colorList.add(dog.getColor());
                 }
-                req.setAttribute("dogList", dogList);
-                req.setAttribute("typeList", typeList);
-                req.setAttribute("colorList", colorList);
-                req.getRequestDispatcher("/index.jsp").forward(req, resp);
+                session.setAttribute("dogList", dogList);
+                session.setAttribute("typeList", typeList);
+                session.setAttribute("colorList", colorList);
+                resp.sendRedirect("/home");
             }
         }
         else {

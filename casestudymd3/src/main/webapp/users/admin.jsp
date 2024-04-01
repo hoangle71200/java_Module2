@@ -19,7 +19,7 @@
     <a class="btn btn-success btn-lg" href="/user" role="button">Quản lý User</a>
     <a class="btn btn-info btn-lg" href="/dog" role="button">Quản lý Dog</a>
     <form action="/home" method="post">
-    <button class="btn btn-secondary btn-lg" role="button">Đăng Xuất</button>
+        <button class="btn btn-secondary btn-lg" role="button">Đăng Xuất</button>
     </form>
 </div>
 </body>

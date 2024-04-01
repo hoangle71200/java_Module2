@@ -5,11 +5,15 @@
     <title>Title</title>
 </head>
 <link rel="stylesheet" href="/static/css/bootstrap.css">
-<script src="static/js/bootstrap.js"></script>
+<script src="../static/js/bootstrap.js"></script>
 <link rel="stylesheet" href="/static/myCSS/khachhangCSS.css">
 <body>
     <div id="khachhangID">
         <h1>Danh sách khách hàng</h1>
+        <a class="btn btn-success" href="/khachHangList?action=create" role="button">Create</a>
+        <a class="btn btn-success" href="/khachHangList?action=edit" role="button">Create</a>
+        <a class="btn btn-success" href="/khachHangList?action=delete" role="button">Create</a>
+
         <table class="table">
             <thead>
             <tr>

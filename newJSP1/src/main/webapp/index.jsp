@@ -9,5 +9,13 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
+<br>
+<a href="login.jsp">Login to Servlet</a>
+<br>
+<a href="chuyendoitiente.jsp">Chuyển đổi tiền tệ</a>
+<br>
+<a href="khachHangList">Quản lý khách hàng</a>
+<br>
+<a href="calculator.jsp">Calculator</a>
 </body>
 </html>
